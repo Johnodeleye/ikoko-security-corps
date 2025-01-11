@@ -42,7 +42,7 @@ const Service = () => {
         Our <span className="text-rose-700">Services</span>
       </h1>
       <p className="text-sm px-6 mx-auto text-center mt-2">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ultrices sapien vel quam luctus pulvinar.
+      Our expert security teams provide top-notch protection and surveillance services.
       </p>
       <p className="text-center text-rose-700 mb-8">___________</p>
 
