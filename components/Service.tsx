@@ -37,9 +37,9 @@ const services = [
 
 const Service = () => {
   return (
-    <div className="bg-white py-12">
+    <div className="bg-white py-12" id='services'>
       <h1 className="text-3xl font-bold mx-auto px-24 text-center">
-        Our <span className="text-rose-700">Service</span>
+        Our <span className="text-rose-700">Services</span>
       </h1>
       <p className="text-sm px-6 mx-auto text-center mt-2">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ultrices sapien vel quam luctus pulvinar.

@@ -22,15 +22,14 @@ const Header = () => {
   </a>
 </div>
 
-
           <ul className='hidden text-orange-900 md:flex gap-7 font-bold'>
-              <a href="#Header" className='cursor-pointer hover:text-red-800 '>Home</a>
+              <a href="#" className='cursor-pointer hover:text-red-800 '>Home</a>
               <a href="#About" className='cursor-pointer hover:text-red-800 '>About</a>
-              <a href="#Projects" className='cursor-pointer hover:text-red-800 '>Service</a>
+              <a href="#services" className='cursor-pointer hover:text-red-800 '>Service</a>
               <a href="#Testimonals" className='cursor-pointer hover:text-red-800 '>Team</a>
-              <a href="#Testimonals" className='cursor-pointer hover:text-red-800 '>Contact</a>
+              <a href="#contact" className='cursor-pointer hover:text-red-800 '>Contact</a>
           </ul>
-          <a href="https://hubpost-app.vercel.app/authors/mailadeyinka@gmail.com">
+          <a href="https://hubpost-app.vercel.app/">
           <button className="hidden px-6 bg-yellow-500 rounded-full md:block text-white  hover:bg-gray-400 md:ml-9">Blog</button>
           </a>
           
@@ -46,9 +45,9 @@ const Header = () => {
           <Minimize2 className='w-6 text-rose-700' onClick={() => setShowMobileMenu(false)}/>
           </div>
           <ul className='flex flex-col items-center gap-2 px-5 mt-5 text-lg font-medium'>
-          <a onClick={() => setShowMobileMenu(false)} href="#Header" className='inline-block px-4 py-2 rounded-full cursor-pointer hover:text-rose-500'>Home</a>
+          <a onClick={() => setShowMobileMenu(false)} href="#" className='inline-block px-4 py-2 rounded-full cursor-pointer hover:text-rose-500'>Home</a>
           <a onClick={() => setShowMobileMenu(false)} href="#About" className='inline-block px-4 py-2 rounded-full cursor-pointer hover:text-rose-500'>About</a>
-          <a onClick={() => setShowMobileMenu(false)} href="#Project" className='inline-block px-4 py-2 rounded-full cursor-pointer hover:text-rose-500'>Services</a>
+          <a onClick={() => setShowMobileMenu(false)} href="#services" className='inline-block px-4 py-2 rounded-full cursor-pointer hover:text-rose-500'>Services</a>
           <a onClick={() => setShowMobileMenu(false)} href="#Team" className='inline-block px-4 py-2 rounded-full cursor-pointer hover:text-rose-500'>Team</a>
           <a onClick={() => setShowMobileMenu(false)} href="#Contact" className='inline-block px-4 py-2 rounded-full cursor-pointer hover:text-rose-500'>Contact</a>
           <a onClick={() => setShowMobileMenu(false)} href="https://hubpost-app.vercel.app/authors/null" className='inline-block px-4 py-2 rounded-full cursor-pointer hover:text-rose-500'>Blog</a>
