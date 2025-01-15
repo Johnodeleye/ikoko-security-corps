@@ -22,7 +22,7 @@ const About = () => {
             MAY GOD HELP US OUT AS WE FIGHT CRIMES.
             </p>
             {showMore && (
-            <button className="text--700 border border-rose-700 rounded-full hover:bg-rose-700 hover:text-white transition-ease-in-out px-5 py-2 lg:ml-2 md:mt-3 ml-0 mt-4 md:hidden">
+            <button className="text-rose-700 border border-rose-700 rounded-full hover:bg-rose-700 hover:text-white transition-ease-in-out px-5 py-2 lg:ml-2 md:mt-3 ml-0 mt-4 md:hidden">
                 
                     
                 
