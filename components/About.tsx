@@ -7,7 +7,7 @@ import { useState } from "react"
 
 const About = () => {
     const [showMore, setShowMore] = useState(true);
-    const [showText, setShowText] = useState(false)
+    const [showText, setShowText] = useState()
     console.log('sho', setShowText)
     return (
         <div className="px-5 py-20 bg-gray-50" id='About'>
