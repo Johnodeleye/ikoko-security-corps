@@ -1,6 +1,6 @@
 const Card = ({ post }: { post: { id: string; title: string; content: string; imageUrl:string; links: string[] } }) => {
     return (
-      <article className="overflow-hidden rounded-lg border border-gray-100 bg-white shadow-sm hover:shadow-lg transition-shadow duration-300">
+      <article className="overflow-hidden rounded-lg border border-red-500 bg-white shadow-sm hover:shadow-lg transition-shadow duration-300">
         {/* Image Placeholder (Replace with dynamic image if available) */}
         <img
           alt={post.title}
