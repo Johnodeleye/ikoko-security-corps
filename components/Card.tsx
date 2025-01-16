@@ -21,7 +21,7 @@ const Card = ({ post }: { post: { id: string; title: string; content: string; im
           </p>
   
           <a
-            href={`/posts/${post.id}`}
+            href={`https://hubpost-app.vercel.app/posts/${post.id}`}
             className="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-blue-600 hover:text-blue-800"
           >
             Find out more
