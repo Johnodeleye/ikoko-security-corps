@@ -1,14 +1,15 @@
 'use client';
 import React from "react";
 import Swal from "sweetalert2";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   const [result, setResult] = React.useState("");
     
-  const onSubmit = async (event : any) => {
+  const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
       event.preventDefault();
       setResult('Sending....');
-      const formData = new FormData(event.target);
+      const formData = new FormData(event.target as HTMLFormElement);
       
       formData.append('access_key', '8d4a9798-6b50-4e7e-b2d6-55108dd78b15');
       
@@ -26,44 +27,106 @@ const Contact = () => {
             text: "Your message has been received",
             icon: "success"
         });
-        event.target.reset();
+        (event.target as HTMLFormElement).reset();
     } else {
-        alert('Something went wrong');  // Fixed: Removed the second argument
-        console.log('Error:', data);    // Kept the log to show the error details
+        alert('Something went wrong');
+        console.log('Error:', data);
         setResult('');
     }
-    
   };
   
-    return (
-        <div className="bg-gray-50 pt-12 lg:pt-24 pb-24" id="contact">
-             <h1 className="text-3xl font-bold mx-auto px-24 text-center">
-        Contact <span className="text-rose-700">Us</span>
-      </h1>
-      <p className="text-sm px-6 mx-auto text-center mt-2">
-      Have questions or need assistance? Reach out to us using the form below. We're here to respond promptly and support you.
-      </p>
-      <p className="text-center text-rose-700 mb-8 ">___________</p>
+  return (
+    <motion.div
+      className="relative w-full min-h-screen flex items-center justify-center px-6 py-20 overflow-hidden"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1.2 }}
+      id="contact"
+    >
+      {/* Background Image - Fullscreen and Responsive */}
+      <div 
+        className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: "url('/logo.png')",
+          filter: "brightness(0.3)",
+          backgroundSize: "cover",
+        }}
+      />
 
-      <form className="max-w-2xl pt-8 mx-auto text-gray-600 md:border border-red-500 px-6 pb-6 rounded-lg" onSubmit={onSubmit} >
-        <div className='flex flex-wrap'>
-            <div className='w-full text-left md:w-1/2'>
-            Your Name
-            <input type="text" placeholder='Your Name' required className='w-full px-4 py-3 mt-2 border border-gray-300 rounded ' name='Name'/>
-            </div>
-            <div className='w-full pt-4 text-left md:w-1/2 md:pl-4 md:pt-0'>
-            Your Email
-            <input type="email" placeholder='Your Email' required className='w-full px-4 py-3 mt-2 border border-gray-300 rounded' name='Email'/>
-            </div>
-        </div>
-        <div className="my-6 text-left">
-            Message
-            <textarea className='w-full h-48 px-4 py-3 mt-2 border border-gray-300 rounded resize-none' name="Message" placeholder='Write your Message....' required></textarea>
-        </div>
-        <button className="px-12 py-2 text-white bg-rose-600 rounded hover:bg-rose-900">{result ? result : 'Send Message'}</button>
-       </form>
-        </div>
-    )
+      {/* Content Section */}
+      <div className="relative z-10 max-w-3xl w-full bg-white bg-opacity-90 p-8 rounded-lg shadow-lg">
+        <h1 className="text-4xl font-bold text-center text-gray-800">
+          Contact <span className="text-rose-700">Us</span>
+        </h1>
+        <p className="text-sm text-center mt-2 text-gray-600">
+          Have questions or need assistance? Reach out to us using the form below. We're here to respond promptly and support you.
+        </p>
+        <p className="text-center text-rose-700 mb-8">___________</p>
+
+        {/* Contact Form */}
+        <form 
+          onSubmit={onSubmit} 
+          className="grid grid-cols-1 gap-6"
+        >
+          {/* Name Field */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+          >
+            <label>Your Name</label>
+            <input 
+              type="text" 
+              name="Name" 
+              placeholder="Your Name" 
+              required 
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-rose-700"
+            />
+          </motion.div>
+
+          {/* Email Field */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4 }}
+          >
+            <label>Your Email</label>
+            <input 
+              type="email" 
+              name="Email" 
+              placeholder="Your Email" 
+              required 
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-rose-700"
+            />
+          </motion.div>
+
+          {/* Message Field */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6 }}
+          >
+            <label>Message</label>
+            <textarea 
+              name="Message" 
+              placeholder="Write your message..." 
+              required 
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-rose-700"
+            />
+          </motion.div>
+
+          {/* Submit Button */}
+          <motion.button 
+            type="submit" 
+            className="w-full py-3 text-white bg-rose-600 rounded-lg hover:bg-rose-700 transition-all"
+            whileHover={{ scale: 1.05 }}
+          >
+            {result ? result : 'Send Message'}
+          </motion.button>
+        </form>
+      </div>
+    </motion.div>
+  );
 }
 
-export default Contact
+export default Contact;
