@@ -1,4 +1,5 @@
 import About from "@/components/About";
+import BlogPosts from "@/components/BlogPost";
 import Contact from "@/components/Contact";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
@@ -11,6 +12,7 @@ export default function Home() {
     <Header />
     <Hero />
     <About/>
+    <BlogPosts/>
     <Service/>
     <Contact/>
     </div>

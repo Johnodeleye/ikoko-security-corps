@@ -36,13 +36,14 @@ const Contact = () => {
   };
   
   return (
-    <motion.div
-      className="relative w-full min-h-screen flex items-center justify-center px-6 py-20 overflow-hidden"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1.2 }}
-      id="contact"
-    >
+<motion.div
+  className="relative w-full min-h-screen flex items-center justify-center px-6 py-20 overflow-hidden"
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ duration: 1.2 }}
+  id="contact"
+>
+
       {/* Background Image - Fullscreen and Responsive */}
       <div 
         className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
