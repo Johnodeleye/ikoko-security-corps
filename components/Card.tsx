@@ -4,7 +4,7 @@ const Card = ({ post }: { post: { id: string; title: string; content: string; im
         {/* Image Placeholder (Replace with dynamic image if available) */}
         <img
           alt={post.title}
-          src={post.imageUrl || "https://via.placeholder.com/600"}
+          src={post.imageUrl || "https://t4.ftcdn.net/jpg/04/70/29/97/360_F_470299797_UD0eoVMMSUbHCcNJCdv2t8B2g1GVqYgs.jpg"}
           className="h-56 w-full object-cover"
         />
   

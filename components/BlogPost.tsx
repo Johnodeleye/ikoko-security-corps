@@ -29,7 +29,7 @@ const BlogPosts = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await fetch('https://hubpost-app.vercel.app/api/authors/johnayomide920@gmail.com');
+        const response = await fetch('https://hubpost-app.vercel.app/api/authors/ikokolalazy@gmail.com');
         if (!response.ok) throw new Error('Something went wrong!');
         
         const data: ApiResponse = await response.json();
